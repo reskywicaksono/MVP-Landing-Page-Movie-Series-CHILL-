@@ -1,0 +1,235 @@
+/* =====================
+   DESIGN TOKENS
+===================== */
+:root {
+  --card-bg: rgba(24, 26, 28, 0.84);
+  --text-primary: #ffffff;
+  --text-secondary: #b3b3b3;
+  --border-input: rgba(231,227,252,0.23);
+  --input-bg: rgba(255,255,255,0.16);
+}
+
+/* =====================
+   RESET
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+/* =====================
+   PAGE BACKGROUND
+===================== */
+.auth-page {
+  min-height: 100vh;
+  background: #000;
+  overflow: hidden;
+}
+
+.auth-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.auth-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.auth-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 26, 26, 0.55);
+}
+
+/* =====================
+   WRAPPER
+===================== */
+.auth-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =====================
+   CARD
+===================== */
+.auth-card {
+  width: 529px;
+  padding: 40px;
+  border-radius: 16px;
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  gap: 37px;
+}
+
+/* =====================
+   HEADER
+===================== */
+.auth-header {
+  text-align: center;
+}
+
+.auth-logo {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.auth-logo img {
+  height: 28px;
+}
+
+.heading-4 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.text-secondary {
+  font-size: 14px;
+  color: #fff;
+}
+
+/* =====================
+   FORM
+===================== */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 14px;
+}
+
+.form-group input {
+  height: 44px;
+  padding: 0 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border-input);
+  background: var(--input-bg);
+  color: #fff;
+}
+
+.form-group input::placeholder {
+  color: #9a9a9a;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 12px 44px 12px 12px;
+  font-size: 14px;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 60%;
+  right: 12px;
+  transform: translateY(-0%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.toggle-password img {
+  width: 20px;
+  height: 20px;
+}
+
+/* =====================
+   LINKS
+===================== */
+.auth-links {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.auth-links-left {
+  display: flex;
+  gap: 4px;
+  color: var(--text-secondary);
+}
+
+.auth-links-left a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-links-right {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.btn-primary,
+.btn-outline {
+  width: 100%;
+}
+
+/* =====================
+   BUTTONS
+===================== */
+.btn-primary {
+  height: 46px;
+  border-radius: 24px;
+  border: none;
+  background: #6f6f6f;
+  color: #fff;
+  font-weight: 600;
+}
+
+.btn-outline {
+  height: 44px;
+  padding: 0 16px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-outline img {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+}
+
+.divider {
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-secondary);
+}

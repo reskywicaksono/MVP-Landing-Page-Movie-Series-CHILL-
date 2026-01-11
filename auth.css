@@ -1,0 +1,189 @@
+/* =====================
+   AUTH PAGE
+===================== */
+
+.auth-page {
+  min-height: 100vh;
+  background: #000;
+}
+
+.auth-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+
+.auth-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.auth-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(69, 67, 67, 0.3),
+    rgba(0,0,0,0.9)
+  );
+}
+
+/* Layout */
+.auth-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card */
+.auth-card {
+  width: 380px;
+  padding: 36px 32px;
+  border-radius: 16px;
+  background: linear-gradient(
+    180deg,
+    rgba(40,40,40,0.95),
+    rgba(24,26,28,0.95)
+  );
+  backdrop-filter: blur(16px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.auth-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.auth-logo {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.heading-4 {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.text-secondary {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* Form */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-group > input {
+  width: 100%;
+  height: 46px;
+  padding: 0 14px;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: #fff;
+}
+
+.form-group > input:focus {
+  outline: none;
+  border-color: rgba(255,255,255,0.4);
+}
+
+.form-group label {
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+/* Input */
+.input-field {
+  position: relative;
+}
+
+.input-field input {
+  width: 100%;
+  height: 46px;
+  padding: 0 44px 0 14px;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: #fff;
+}
+
+.input-field input:focus {
+  outline: none;
+  border-color: rgba(255,255,255,0.4);
+}
+
+/* Toggle Password */
+.toggle-password {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.toggle-password img {
+  width: 20px;
+  opacity: 0.7;
+}
+
+/* Links */
+.auth-links {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #ccc;
+}
+
+/* Buttons */
+.auth-btn-primary {
+  width: 100%;
+  height: 46px;
+  padding: 0 14px;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: #fff;
+}
+
+.auth-btn-outline {
+  height: 46px;
+  width: 100%;
+  padding: 0 14px;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-btn-outline img {
+  margin-right: 8px;
+  width: 18px;
+  height: 18px;
+}
+
+/* Divider */
+.divider {
+  margin: 8px 0;
+  text-align: center;
+  font-size: 12px;
+  color: #aaa;
+}
+
